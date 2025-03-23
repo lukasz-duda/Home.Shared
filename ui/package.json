@@ -1,0 +1,22 @@
+{
+  "name": "home-shared-ui",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && ncc build src/index.ts -m -e react -e antd"
+  },
+  "peerDependencies": {
+    "antd": "^5.24.4",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "@types/react": "^19.0.12",
+    "@vercel/ncc": "^0.38.3",
+    "typescript": "^5.8.2"
+  }
+}
