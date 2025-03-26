@@ -1,7 +1,7 @@
 import { CommandResult } from "./command";
 import { polishLocale } from "./locale";
 
-const apiUrl = process.env.API_URL;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export async function post({
   path,

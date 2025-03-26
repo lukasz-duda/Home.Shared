@@ -1,22 +1,26 @@
 {
   "name": "home-shared-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && ncc build src/index.ts -m -e react -e antd"
+    "clean": "rm -rf dist node_modules",
+    "build": "rollup --config",
+    "format": "prettier --write ."
   },
   "peerDependencies": {
     "antd": "^5.24.4",
     "react": "^19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.11",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@types/react": "^19.0.12",
-    "@vercel/ncc": "^0.38.3",
+    "prettier": "^3.5.3",
+    "rollup": "^4.37.0",
     "typescript": "^5.8.2"
   }
 }
